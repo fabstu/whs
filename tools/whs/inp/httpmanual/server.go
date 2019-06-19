@@ -170,24 +170,4 @@ func handleConnection(conn net.Conn) {
 			break
 		}
 	}
-
-	/*
-	if value, hasAcceptEncoding := headers["Accept-Encoding"]; hasAcceptEncoding && value == "gzip" {
-		writeHeader(conn, "Content-Encoding", "gzip")
-
-		fmt.Fprintf(conn, "\r\n")
-
-		gzw := gzip.NewWriter(conn)
-		gzw.Write(defaultBody)
-		gzw.Flush()
-	} else {
-		fmt.Fprintf(conn, "\r\n")
-
-		fmt.Fprintf(conn, string(defaultBody))
-	}
-	*/
-
-
-
-
 }
