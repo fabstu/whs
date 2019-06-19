@@ -5,12 +5,11 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"log"
 	"net"
 	"regexp"
 	"strconv"
 	"strings"
-
-	"github.com/prometheus/common/log"
 )
 
 type firstLine struct {
