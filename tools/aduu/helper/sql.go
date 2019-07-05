@@ -12,4 +12,3 @@ func CleanupWithError(tx *sql.Tx, err error) error {
 	}
 	return err
 }
-

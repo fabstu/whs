@@ -1,6 +1,6 @@
 // +build !main
 
-package completion
+package completion // import "aduu.dev/lib/completion"
 
 import (
 	"bytes"
@@ -33,8 +33,6 @@ func GenerateShellCompletion(cmd *cobra.Command, boilerPlate string, shell strin
 
 	var buffer bytes.Buffer
 
-
-
 	if err := RunCompletion(&buffer, boilerPlate, cmd, []string{shell}); err != nil {
 		panic(err)
 	}
@@ -58,7 +56,6 @@ func NewCompletionCMD() *cobra.Command {
 
 	return cmd
 }
-
 
 /*
 run, found := completionShells[args[0]]

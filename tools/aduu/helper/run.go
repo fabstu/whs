@@ -20,7 +20,7 @@ func RunE(cmd *exec.Cmd, name string, settings ...ExecuteSetting) (err error) {
 	setting := getSetting(settings)
 	applySettings(cmd, setting)
 
-	 _, err = runWithSettings(cmd, setting)
+	_, err = runWithSettings(cmd, setting)
 	if err != nil {
 		fmt.Printf("%s failed: %v\n", name, err)
 		return err
@@ -39,8 +39,6 @@ func getSetting(settings []ExecuteSetting) (setting ExecuteSetting) {
 	}
 	return
 }
-
-
 
 func applySettings(cmd *exec.Cmd, setting ExecuteSetting) {
 	if setting.Dir != "" {
@@ -80,7 +78,7 @@ func runWithSettings(cmd *exec.Cmd, setting ExecuteSetting) (out string, err err
 		if byteOut != nil {
 			out = strings.TrimSpace(string(byteOut))
 		}
-	} else  {
+	} else {
 		err = cmd.Run()
 	}
 
@@ -308,9 +306,9 @@ func ExecuteWithOutputE(s string, obj interface{}, settings ...ExecuteSetting) (
 }
 
 type ExecuteSetting struct {
-	Dir string
-	start bool
-	output bool
+	Dir     string
+	start   bool
+	output  bool
 	timeout time.Duration
 }
 
@@ -344,7 +342,6 @@ func WithTimeout(time time.Duration) ExecuteSetting {
 		timeout: time,
 	}
 }
-
 
 func Getwd() string {
 	wd, err := os.Getwd()

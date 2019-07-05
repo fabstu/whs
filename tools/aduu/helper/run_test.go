@@ -8,8 +8,9 @@ import (
 	"reflect"
 	"testing"
 
-	"aduu.dev/tools/aduu/helper/testhelper"
 	"github.com/magiconair/properties/assert"
+
+	"aduu.dev/tools/aduu/helper/testhelper"
 )
 
 func TestRun(t *testing.T) {

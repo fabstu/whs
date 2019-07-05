@@ -18,7 +18,7 @@ func CurrentPackage() string {
 	root := filepath.Dir(gomod)
 
 	// Add module path in front, then add current file with root removed.
-	return modPath + "/" + strings.TrimPrefix(currentDir, root + "/")
+	return modPath + "/" + strings.TrimPrefix(currentDir, root+"/")
 }
 
 func CurrentPackagePath() string {

@@ -76,6 +76,7 @@ func ModulePath(mod []byte) string {
 	}
 	return "" // missing module path
 }
+
 // Determines gomod path and modpath starting from the given path.
 func ModPathFrom(from string) (string, string, error) {
 	gomodPath, err := FindGoModFrom(from)
